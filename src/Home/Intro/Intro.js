@@ -23,7 +23,9 @@ function Intro() {
                     </Row>
                 </Col>
             </Row>
-            <div className="high text-center mt-20">(more content coming soon...)</div>
+            <div className="high text-center mt-20">
+                <p>more content coming soon...</p>
+                <p>for now, check out the <a href="https://adamd.fyi">legacy site</a></p></div>
         </Container>
     );
   }
