@@ -42,7 +42,7 @@ useEffect(() => {
                 <Col lg={6} sm={12}>
                     {data.map((item, index, list) => (
                         item !== undefined && item.type !== undefined && item.type !== "exp" ? <React.Fragment /> : 
-                        list[index-1] == undefined ? (
+                        list[index-1] === undefined ? (
                             <React.Fragment>
                                 <h2>{item.company}</h2>
                                 <b>{item.title}</b>
