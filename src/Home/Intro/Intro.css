@@ -1,0 +1,19 @@
+.intro-container {
+}
+
+.intro {
+    background-color: #f0fff0;
+    
+    margin-top:20vh;
+}
+
+.dm-sans-500 {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+.f-xl{
+    font-size: xxx-large;
+}
