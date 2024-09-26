@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-function App() {
+function Router() {
   return (
-    <div className="App">
+    <div className="Router">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<p>home</p>} />
@@ -13,4 +13,4 @@ function App() {
   );
 }
 
-export default App;
+export default Router;
