@@ -5,10 +5,10 @@ import Home from "../Home/Home";
 
 function Uni() {
     return (
-      <React.Fragment>
+      <Container>
         <Snippet />
         <Home />
-      </React.Fragment>
+      </Container>
     );
   }
   
