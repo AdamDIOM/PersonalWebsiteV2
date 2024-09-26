@@ -25,6 +25,7 @@ function Snippet() {
                     </Col>
                 </Row>
             </Container>
+            <p> value={process.env.REACT_APP_GOOGLE_SERVICE_ACCOUNT_EMAIL}</p>
         </a>
     );
   }
