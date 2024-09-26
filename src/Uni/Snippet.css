@@ -3,7 +3,7 @@
 
 .intro {
     background-color: #ffe4ce;
-
+    
 }
 
 .mt-20{
@@ -31,4 +31,6 @@
     }
 }
 
-
+.rounded-extra{
+    border-radius:50px;
+}
