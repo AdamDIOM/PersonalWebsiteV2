@@ -1,4 +1,4 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import './Experience.css';
 import React, { useEffect, useState } from "react";
 import { Parallax } from "react-scroll-parallax";
@@ -25,8 +25,7 @@ useEffect(() => {
       .then(data => setData(data))
       .then(console.log(data))
       .catch(error => console.error('Error fetching data:', error));
-  }, []);
-  var dateFormat = require('dateformat');
+  });
 
 
     return (
@@ -42,25 +41,25 @@ useEffect(() => {
                 </Col>
                 <Col lg={6} sm={12}>
                     {data.map((item, index, list) => (
-                        item != undefined && item.type != undefined && item.type != "exp" ? <React.Fragment /> : 
+                        item !== undefined && item.type !== undefined && item.type !== "exp" ? <React.Fragment /> : 
                         list[index-1] == undefined ? (
                             <React.Fragment>
                                 <h2>{item.company}</h2>
                                 <b>{item.title}</b>
-                                <p>{item.start_date} - {item.end_date != "" ? item.end_date : "Present"}</p>
+                                <p>{item.start_date} - {item.end_date !== "" ? item.end_date : "Present"}</p>
                             </React.Fragment>
                         ) :
-                        list[index-1] != undefined && list[index-1].company != list[index].company ? (
+                        list[index-1] !== undefined && list[index-1].company !== list[index].company ? (
                             <React.Fragment>
                                 <h2>{item.company}</h2>
                                 <b>{item.title}</b>
-                                <p>{item.start_date} - {item.end_date != "" ? item.end_date : "Present"}</p>
+                                <p>{item.start_date} - {item.end_date !== "" ? item.end_date : "Present"}</p>
                             </React.Fragment>
                         )
                         :
                         <React.Fragment>
                             <b>{item.title}</b>
-                            <p>{item.start_date} - {item.end_date != "" ? item.end_date : "Present"}</p>
+                            <p>{item.start_date} - {item.end_date !== "" ? item.end_date : "Present"}</p>
                         </React.Fragment>
                     ))}
                 </Col>
