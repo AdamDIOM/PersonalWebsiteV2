@@ -12,7 +12,7 @@ function Intro() {
                             <span>Hey, I'm Adam!</span>
                         </Col>
                         <Col md={6} sm={12}>
-                            <img src="/img/Adam.png" alt="image of Adam stood in front of a quay with boats and a lifting bridge" className="img-fluid"/>
+                            <img src="/img/Adam.png" alt="Adam stood in front of a quay with boats and a lifting bridge" className="img-fluid"/>
                         </Col>
                     </Row>
                 </Col>
