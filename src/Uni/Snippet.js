@@ -19,13 +19,12 @@ function Snippet() {
                                 <span>Follow me!</span>
                             </Col>
                             <Col lg={6} sm={12}>
-                                <img src="/img/Instagram QR.png" alt="QR code to Adam's Instagram" className="img-fluid rounded-extra"/>
+                                <img src="/img/Instagram QR.png" alt="QR code to Adam's Instagram" className="img-fluid rounded-50"/>
                             </Col>
                         </Row>
                     </Col>
                 </Row>
             </Container>
-            <p> value={process.env.REACT_APP_GOOGLE_SERVICE_ACCOUNT_EMAIL}</p>
         </a>
     );
   }

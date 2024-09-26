@@ -1,0 +1,43 @@
+.linkedin {
+    background-color: #8888ff;
+
+}
+
+.mt-10{
+    margin-top:10vh;
+}
+
+.dm-sans-500 {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+.f-xl{
+    font-size: xxx-large;
+}
+
+.high{
+    height:80vh;
+}
+
+    .parallax-experience{
+        transform:translateY(130px);
+    }
+
+
+.rounded-30{
+    border-radius:10px;
+}
+
+.shadow-white{
+    box-shadow: 0 0 3rem white;
+}
+
+@media (min-width: 768px) {
+    .w-md-100{
+        width:100%;
+    }
+}
+

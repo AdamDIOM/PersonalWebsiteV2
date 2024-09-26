@@ -1,15 +1,19 @@
-import { Container } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import Intro from "./Intro/Intro";
 import Experience from "./Experience/Experience";
+import LinkedIn from "./LinkedIn/LinkedIn";
 
 function Home() {
     return (
       <Container>
-        <Intro />
-        <Experience />
-        <div className="high text-center mt-20">
-                <p>more content coming soon...</p>
-                <p>for now, check out the <a href="https://adamd.fyi">legacy site</a></p></div>
+        <Row>
+            <Intro />
+            <Experience />
+            <LinkedIn />
+            <div className="high text-center mt-20">
+                    <p>more content coming soon...</p>
+                    <p>for now, check out the <a href="https://adamd.fyi">legacy site</a></p></div>
+        </Row>
       </Container>
     );
   }
