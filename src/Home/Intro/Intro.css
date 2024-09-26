@@ -2,8 +2,10 @@
 }
 
 .intro {
-    background-color: #f0fff0;
-    
+    background-color: #ffe4ce;
+}
+
+.mt-20{
     margin-top:20vh;
 }
 
@@ -17,3 +19,15 @@
 .f-xl{
     font-size: xxx-large;
 }
+
+.high{
+    height:80vh;
+}
+
+@media (max-width: 1200px) {
+    .parallax-intro{
+        transform:translateY(130px);
+    }
+}
+
+
