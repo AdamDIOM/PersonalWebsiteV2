@@ -10,9 +10,9 @@ function Home() {
             <Intro />
             <Experience />
             <LinkedIn />
-            <div className="high text-center mt-20">
+            <div className="high text-center text-light mt-20">
                     <p>more content coming soon...</p>
-                    <p>for now, check out the <a href="https://adamd.fyi">legacy site</a></p></div>
+                    <p>for now, check out the <a href="https://adamd.fyi" className="text-light">legacy site</a></p></div>
         </Row>
       </Container>
     );
