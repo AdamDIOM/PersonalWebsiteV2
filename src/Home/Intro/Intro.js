@@ -8,7 +8,7 @@ function Intro() {
         <Col  md={{span: 8, offset: 2}} className="intro p-3 rounded shadow-sm dm-sans-500 mt-20">
             <Row className="align-middle">
                 <Col lg={6} sm={12} className="f-xl text-center d-none d-lg-flex justify-content-center">
-                    <Parallax speed={100} className="d-flex align-items-end parallax-intro">
+                    <Parallax speed={100} className="d-flex align-items-center parallax-intro">
                         <span>Hey, I'm Adam!</span>
                     </Parallax>
                 </Col>

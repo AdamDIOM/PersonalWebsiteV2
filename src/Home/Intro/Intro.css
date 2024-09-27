@@ -22,10 +22,4 @@
     height:20vh;
 }
 
-@media (max-width: 1199px) {
-    .parallax-intro{
-        transform:translateY(130px);
-    }
-}
-
 
