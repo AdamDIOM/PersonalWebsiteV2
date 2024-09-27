@@ -31,8 +31,8 @@ useEffect(() => {
       .then(response => response.sort((a, b) => months.indexOf(a.start_month) > months.indexOf(b.start_month)))
       .then(response => response.sort((a, b) => String(b.start_year).localeCompare(String(a.start_year))))
       .then(response => response.sort((a, b) => a.company.localeCompare(b.company)))
-      .then(data => setData(data))
-      .then(console.log(data))
+      .then(response => setData(response))
+      //.then(console.log(data))
       .catch(error => console.error('Error fetching data:', error));
     }
     fetchData()
