@@ -17,7 +17,9 @@ function Experience(props) {
             "free_text": "",
             "img_url": "",
             "type": "loading...",
-            "website_url": ""
+            "website_url": "",
+            "individual_img_url": "",
+            "individual_url": ""    
           }
     ]);
 
@@ -58,9 +60,32 @@ useEffect(() => {
     fetchData()
   }, []);
 
+    function itemDetails(item, width = 12){
+        return (
+            <Col xs={width}>
+                <b>{item.individual_url !== undefined && item.individual_url !== "" ? (
+                            <a href={item.individual_url} target="_blank" rel="noreferrer" className="text-dark">{item.title}</a>
+                            ) : (
+                            <React.Fragment>{item.title}</React.Fragment>
+                        )}</b>
+                        <p>{(item.start_year !== undefined && item.start_year !== "" && item.end_year !== undefined) ? (
+                            item.start_year === item.end_year && item.start_month === item.end_month ? (
+                                <React.Fragment>{item.start_month} {item.start_year}</React.Fragment> 
+                            ) : (
+                            <React.Fragment>{item.start_month} {item.start_year} - {item.end_month !== "" ? (
+                                `${item.end_month} ${item.end_year}`
+                             ) : "Present"}</React.Fragment>)
+                            ) : ""}</p>
+                        {item.free_text !== undefined && item.free_text !== "" ? (
+                            <p className="freetext">{item.free_text}</p>
+                        ) : ""}
+            </Col>
+        )
+    }
+
 
     return (
-        <Col  md={{span: props.md_span ?? 8, offset: props.md_offset ?? 0}} className=" p-3 rounded shadow-sm mt-10 mb-5 dm-sans-500" style={{background: props.background}}>
+        <Col  md={{span: props.md_span ?? 8, offset: props.md_offset ?? 0}} className="experience-col p-3 rounded shadow-sm mt-10 mb-5 dm-sans-500" style={{background: props.background}}>
             <Row className="align-middle">
                 <Col lg={6} sm={12} className="f-xl text-center d-none d-lg-flex justify-content-center align-items-center">
                     <Parallax speed={100} className="d-flex parallax-experience">
@@ -93,10 +118,21 @@ useEffect(() => {
                                 )}
                                 </h2>
                              ) : ""}
-                        <b>{item.title}</b>
-                        <p>{(item.start_year !== undefined && item.start_year !== "") ? (<React.Fragment>{item.start_month} {item.start_year} - {item.end_month !== "" ? `${item.end_month} ${item.end_year}` : "Present"}</React.Fragment>) : ""}</p>
-                        {item.free_text !== undefined && item.free_text !== "" ? <p className="freetext">{item.free_text}</p> : ""}
-                        {(list[index+1] !== undefined && list[index+1].company !== list[index].company) ? <hr />: ""}
+                             <Row className="experience-item-details">
+                                {item.individual_img_url !== null && item.individual_img_url !== "" ? (
+                                    
+                                    <React.Fragment>
+                                        <Col xs={3}>
+                                            <img src={item.individual_img_url} alt={item.title + "logo/graphic"} className="w-100 image-fluid"/>
+                                        </Col>
+                                        {itemDetails(item, 9)}
+                                        </React.Fragment>
+                                ) : (
+                                    <React.Fragment>{itemDetails(item)}</React.Fragment>
+                                )}
+                             
+                        </Row>
+                        {(list[index+1] !== undefined && list[index+1].company !== list[index].company) ? <hr /> : ""}
                     </Row>
                     ))}
                 </Col>

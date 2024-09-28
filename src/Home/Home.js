@@ -31,6 +31,23 @@ function Home() {
                 background="#ccffcc"
                 md_offset="1"
             />
+            <Experience
+                title="Certifications"
+                filter="certs"
+                background="#ffffaa"
+                md_offset="2"
+            />
+            <Experience
+                title="Projects"
+                filter="proj"
+                background="#ffdddd"
+            />
+            <Social
+                type="GitHub"
+                url = "https://github.com/AdamDIOM"
+                logo = "https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                background="#ffffff"
+            />
             <div className="high text-center text-light mt-20">
                     <p>more content coming soon...</p>
                     <p>for now, check out the <a href="https://adamd.fyi" className="text-light">legacy site</a></p></div>
