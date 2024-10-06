@@ -22,13 +22,15 @@ function Experience(props) {
             "individual_url": ""    
           }
     ]);
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 
 
 useEffect(() => {
-    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
     function sortList(received){
+        received.sort((a, b) => b.start_month.toString().padStart(2, '0').localeCompare(a.start_month.toString().padStart(2, '0')));
+        received.sort((a, b) => b.start_year.toString().localeCompare(a.start_year.toString()));
         console.log(received[0]);
         var newList = [];
         console.log(newList);
@@ -45,10 +47,6 @@ useEffect(() => {
     function fetchData() {
         fetch('https://script.googleusercontent.com/macros/echo?user_content_key=vPja-qmNR9OACB6PINOgnbHkdZ_FXc2tCG3HD8vosGW6itJaiL9E1hOimu1OR0vxikINgfBUQcNK1BnNE9cY2oZ1n_fjUdQ8m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnE7f5NJmJVFUmIIk6m2PTx-W9nYTVJFE3hBoTHmr7u6lFJHijhv_GG5GwAIBhrZb6-Pm32NKPcw5z7zwJfMr1voe-ZBFab95Fw&lib=M0Dm_mTIH57OLRgr4D2knB9oBno9WCgsY') 
         .then(response => response.json())
-        .then(response => response.sort((a, b) => months.indexOf(a.start_month) > months.indexOf(b.start_month)))
-        .then(response => response.sort((a, b) => String(b.start_year).localeCompare(String(a.start_year))))
-        //.then(response => response.sort((a, b) => a.company.localeCompare(b.company)))
-        //.then(response => setData(response))
         .then(response => sortList(response))
         .then(response => setData(response))
         .catch(error => console.error('Error fetching data:', error));
@@ -60,6 +58,16 @@ useEffect(() => {
     fetchData()
   }, []);
 
+  function getMonth(number){
+    return (
+        Number.isInteger(number) && number > 0 && number < 13 ? (
+            <React.Fragment>{months[number-1]}</React.Fragment> 
+        ) : (
+            <React.Fragment>{number}</React.Fragment>
+        )
+    )
+  }
+
     function itemDetails(item, width = 12){
         return (
             <Col xs={width}>
@@ -70,10 +78,10 @@ useEffect(() => {
                         )}</b>
                         <p>{(item.start_year !== undefined && item.start_year !== "" && item.end_year !== undefined) ? (
                             item.start_year === item.end_year && item.start_month === item.end_month ? (
-                                <React.Fragment>{item.start_month} {item.start_year}</React.Fragment> 
+                                <React.Fragment>{getMonth(item.start_month)} {item.start_year}</React.Fragment>
                             ) : (
-                            <React.Fragment>{item.start_month} {item.start_year} - {item.end_month !== "" ? (
-                                `${item.end_month} ${item.end_year}`
+                            <React.Fragment>{getMonth(item.start_month)} {item.start_year} - {item.end_month !== "" ? (
+                                <React.Fragment>{getMonth(item.end_month)} {item.end_year}</React.Fragment>
                              ) : "Present"}</React.Fragment>)
                             ) : ""}</p>
                         {item.free_text !== undefined && item.free_text !== "" ? (
