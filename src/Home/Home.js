@@ -7,6 +7,7 @@ import LeftContent from "../components/LeftContent/LeftContent";
 
 
 function Home() {
+    const endpoint = "https://script.google.com/macros/s/AKfycby2Fks3RMIW_JEhN25o5NdI84BFCb7W8k0wkzNsz85XKJrypbjGJsFz3gHArSiBQ_Ue/exec"
     return (
       <Container>
         <Row>
@@ -16,6 +17,7 @@ function Home() {
                 filter="exp"
                 background="#e4ceff"
                 md_span="8"
+                endpoint={endpoint}
             />
             <Social 
                 type = "LinkedIn"
@@ -33,17 +35,20 @@ function Home() {
                 filter="edu"
                 background="#ccffcc"
                 md_offset="1"
+                endpoint={endpoint}
             />
             <RightContent
                 title="Certifications"
                 filter="certs"
                 background="#ffffaa"
                 md_offset="2"
+                endpoint={endpoint}
             />
             <RightContent
                 title="Projects"
                 filter="proj"
                 background="#ffdddd"
+                endpoint={endpoint}
             />
             <Social
                 type="GitHub"

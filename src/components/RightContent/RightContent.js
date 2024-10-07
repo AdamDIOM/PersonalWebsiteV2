@@ -45,7 +45,7 @@ useEffect(() => {
     }
 
     function fetchData() {
-        fetch(`https://script.google.com/macros/s/AKfycby2Fks3RMIW_JEhN25o5NdI84BFCb7W8k0wkzNsz85XKJrypbjGJsFz3gHArSiBQ_Ue/exec?filter=${props.filter}`) 
+        fetch(`${props.endpoint}?filter=${props.filter}`) 
         .then(response => response.json())
         .then(response => sortList(response))
         .then(response => setData(response))
