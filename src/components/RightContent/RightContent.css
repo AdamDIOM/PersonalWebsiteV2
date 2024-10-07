@@ -1,0 +1,28 @@
+.experience-col {
+    overflow:hidden;
+
+}
+
+.mt-10{
+    margin-top:10vh;
+}
+
+.dm-sans-500 {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+.f-xl{
+    font-size: xxx-large;
+}
+
+    .parallax-experience{
+        transform:translateY(130px);
+    }
+
+
+.freetext{
+    white-space: pre-wrap;
+}

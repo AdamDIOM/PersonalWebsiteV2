@@ -1,14 +1,17 @@
 import { Container, Row } from "react-bootstrap";
 import Intro from "./Intro/Intro";
-import Experience from "./Experience/Experience";
+import RightContent from "../components/RightContent/RightContent";
 import Social from "./Social/Social";
+import LeftContent from "../components/LeftContent/LeftContent";
+
+
 
 function Home() {
     return (
       <Container>
         <Row>
             <Intro />
-            <Experience 
+            <RightContent 
                 title="Experience"
                 filter="exp"
                 background="#e4ceff"
@@ -25,19 +28,19 @@ function Home() {
                 logo = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png"
                 md_offset="0"
             />
-            <Experience 
+            <LeftContent 
                 title="Education"
                 filter="edu"
                 background="#ccffcc"
                 md_offset="1"
             />
-            <Experience
+            <RightContent
                 title="Certifications"
                 filter="certs"
                 background="#ffffaa"
                 md_offset="2"
             />
-            <Experience
+            <RightContent
                 title="Projects"
                 filter="proj"
                 background="#ffdddd"
