@@ -56,7 +56,7 @@ function LeftContent(props) {
             //setData(newList);
         }
         fetchData()
-    }, []);
+    }, [props.endpoint, props.filter]);
 
     function getMonth(number) {
         return (
