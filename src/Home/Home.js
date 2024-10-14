@@ -1,8 +1,8 @@
 import { Container, Row } from "react-bootstrap";
-import Intro from "./Intro/Intro";
-import RightContent from "../components/RightContent/RightContent";
-import Social from "./Social/Social";
-import LeftContent from "../components/LeftContent/LeftContent";
+import RightGraphic from "../components/Image/RightGraphic/RightGraphic";
+import RightContent from "../components/ListInfo/RightContent/RightContent";
+import Social from "../components/Social/Social";
+import LeftContent from "../components/ListInfo/LeftContent/LeftContent";
 
 
 
@@ -11,7 +11,11 @@ function Home() {
     return (
       <Container>
         <Row>
-            <Intro />
+            <RightGraphic
+                img_url="/img/Adam.png"
+                img_alt_text="Adam stood in front of a quay with boats and a lifting bridge"
+                caption="Hey, I'm Adam!"
+            />
             <RightContent 
                 title="Experience"
                 filter="exp"
