@@ -19,6 +19,15 @@ function Campaign() {
           img_url="/img/campaign/poster.png"
           img_alt_text="Adam's election poster"
           background="#ff0000" />
+        <a href="https://sheffieldsu.com/vote">
+          <Caption
+            caption="Vote here!"
+            color="#ffffff"
+            background="#030100"
+            noscroll
+          />
+        
+        </a>
         <LeftGraphic
           padding=""
           img_url="/img/Adam.png"
